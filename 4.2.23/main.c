@@ -4,8 +4,9 @@
 int main() {
 
     char c[1000];
-    FILE *f = fopen("D:\\C\\4.2.23\\input.txt", "r");
-    fgets(c, 1000, f);
+    FILE *f = fopen("input.txt", "r");
+    if(fgets(c, 1000, f) == NULL)printf("truble\n");
+
     int i, flagWord = 0, digitRes = 0, wordRes = 0;
 
     for(i = 0; c[i] != '\0'; i++) {
